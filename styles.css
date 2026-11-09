@@ -175,3 +175,9 @@ body,body *{color:#49382b}
 .site-header::before{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 140' preserveAspectRatio='none'%3E%3Cpath d='M0 0 H1200 V24 C1080 34 1035 62 910 58 S710 30 600 62 S390 88 285 54 S95 34 0 54 Z' fill='%2382917b'/%3E%3Cpath d='M0 54 C95 34 180 34 285 54 S490 94 600 62 S785 34 910 58 S1100 34 1200 24' fill='none' stroke='%234b5c47' stroke-width='3.2'/%3E%3Cpath d='M0 72 C115 52 185 72 295 67 C405 62 475 108 600 82 C720 57 805 48 915 75 C1030 103 1110 57 1200 48' fill='none' stroke='%23a16d48' stroke-width='2' stroke-dasharray='13 8 3 8' stroke-linecap='round' opacity='.95'/%3E%3C/svg%3E");
 }
+
+
+/* Smoothly blend the sage wave into the cream page while preserving both distinct outlines */
+.site-header::before{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 140' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='sageCreamBlend' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%2382917b'/%3E%3Cstop offset='58%25' stop-color='%23b8c2b0'/%3E%3Cstop offset='100%25' stop-color='%23f4eee5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 0 H1200 V24 C1080 34 1035 62 910 58 S710 30 600 62 S390 88 285 54 S95 34 0 54 Z' fill='url(%23sageCreamBlend)'/%3E%3Cpath d='M0 54 C95 34 180 34 285 54 S490 94 600 62 S785 34 910 58 S1100 34 1200 24' fill='none' stroke='%234b5c47' stroke-width='3.2'/%3E%3Cpath d='M0 72 C115 52 185 72 295 67 C405 62 475 108 600 82 C720 57 805 48 915 75 C1030 103 1110 57 1200 48' fill='none' stroke='%23a16d48' stroke-width='2' stroke-dasharray='13 8 3 8' stroke-linecap='round' opacity='.95'/%3E%3C/svg%3E");
+}
