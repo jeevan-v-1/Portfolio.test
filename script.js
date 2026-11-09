@@ -114,11 +114,6 @@ function renderProjects(projects){
         fallback.textContent='VIDEO PREVIEW';
         preview.append(fallback);
       }
-      const overlay=document.createElement('span');
-      overlay.className='video-thumbnail__play';
-      overlay.setAttribute('aria-hidden','true');
-      overlay.textContent='▶';
-      preview.append(overlay);
       preview.addEventListener('click',()=>openVideo(video,title));
       media.append(preview);
       const watch=document.createElement('button');
