@@ -136,3 +136,9 @@
   background:linear-gradient(110deg,#80583d 0%,#746044 76%,#65765f 100%);
   box-shadow:0 12px 28px rgba(73,56,43,.27),0 0 22px rgba(130,145,123,.3),inset 0 0 0 1px rgba(223,230,218,.18);
 }
+
+
+/* Soft green-to-cream fade through the header wave */
+.site-header::before{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 140' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='waveFade' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%2382917b'/%3E%3Cstop offset='55%25' stop-color='%23aab5a1'/%3E%3Cstop offset='100%25' stop-color='%23f4eee5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 0 H1200 V24 C1080 34 1035 62 910 58 S710 30 600 62 S390 88 285 54 S95 34 0 54 Z' fill='url(%23waveFade)'/%3E%3Cpath d='M0 54 C95 34 180 34 285 54 S490 94 600 62 S785 34 910 58 S1100 34 1200 24' fill='none' stroke='%234b5c47' stroke-width='3.2'/%3E%3Cpath d='M0 62 C95 42 180 42 285 62 S490 102 600 70 S785 42 910 66 S1100 42 1200 32' fill='none' stroke='%23a16d48' stroke-width='1.5' opacity='.9'/%3E%3C/svg%3E");
+}
