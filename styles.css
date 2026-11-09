@@ -49,3 +49,51 @@
  .hero{padding-top:55px;padding-bottom:105px}
  .hero::after{height:58px}
 }
+
+/* Corrected layout: header is its own sage strip; the wave bridges into cream content */
+.site-header{
+  height:104px;
+  position:relative;
+  z-index:5;
+  isolation:isolate;
+  overflow:visible;
+  background:#82917b;
+  border:0;
+  padding:0 7%;
+}
+.site-header .brand{color:#fff}
+.site-header .brand span{color:#f0f1e9}
+.site-header .nav-links a{color:#fff}
+.site-header .nav-links a:hover{color:#e2e9dc}
+.site-header .menu-toggle{color:#fff}
+.site-header::before{
+  content:"";
+  display:block;
+  position:absolute;
+  z-index:0;
+  pointer-events:none;
+  top:calc(100% - 1px);
+  left:0;
+  right:0;
+  height:116px;
+  opacity:1;
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:100% 100%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 140' preserveAspectRatio='none'%3E%3Cpath d='M0 2 C120 32 185 28 300 3 S470 12 575 55 S760 74 880 43 S1050 20 1200 0' fill='none' stroke='%2382917b' stroke-width='5'/%3E%3Cpath d='M0 22 C120 52 190 48 305 23 S470 32 580 75 S760 94 885 63 S1055 40 1200 20' fill='none' stroke='%23a16d48' stroke-width='2.5' opacity='.8'/%3E%3C/svg%3E");
+}
+.site-header::after{display:none}
+.site-header .brand,.site-header .nav-links,.site-header .menu-toggle{position:relative;z-index:2}
+.hero{
+  background:#f4eee5;
+  padding-top:150px;
+  padding-bottom:80px;
+  overflow:visible;
+}
+.hero::after{display:none;content:none}
+@media(max-width:700px){
+ .site-header{height:84px;padding:0 6%}
+ .site-header::before{display:block;top:calc(100% - 1px);height:88px;left:0;right:0;opacity:1}
+ .nav-links{background:#82917b}
+ .hero{background:#f4eee5;padding:120px 8% 75px}
+}
