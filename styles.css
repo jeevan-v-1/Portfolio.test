@@ -97,3 +97,30 @@
  .nav-links{background:#82917b}
  .hero{background:#f4eee5;padding:120px 8% 75px}
 }
+
+
+/* Filled wave extension: sage panel follows the curved edge, with a clear outline */
+.site-header{background:#82917b;overflow:visible;z-index:5}
+.site-header::before{
+  content:"";
+  display:block;
+  position:absolute;
+  z-index:1;
+  pointer-events:none;
+  top:calc(100% - 1px);
+  left:0;right:0;height:116px;
+  opacity:1;
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:100% 100%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 140' preserveAspectRatio='none'%3E%3Cpath d='M0 0 H1200 V24 C1080 34 1035 62 910 58 S710 30 600 62 S390 88 285 54 S95 34 0 54 Z' fill='%2382917b'/%3E%3Cpath d='M0 54 C95 34 180 34 285 54 S490 94 600 62 S785 34 910 58 S1100 34 1200 24' fill='none' stroke='%234b5c47' stroke-width='3.2'/%3E%3Cpath d='M0 62 C95 42 180 42 285 62 S490 102 600 70 S785 42 910 66 S1100 42 1200 32' fill='none' stroke='%23a16d48' stroke-width='1.5' opacity='.9'/%3E%3C/svg%3E");
+}
+.site-header::after{display:none}
+.hero{position:relative;z-index:0;background:#f4eee5;padding-top:72px;overflow:visible}
+.hero>*{position:relative;z-index:2}
+@media(max-width:700px){
+ .site-header{height:84px}
+ .site-header::before{height:90px}
+ .hero{background:#f4eee5;padding:105px 8% 75px}
+ .nav-links{background:#82917b}
+}
