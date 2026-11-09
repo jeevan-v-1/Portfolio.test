@@ -16,3 +16,36 @@
 .site-header::after{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--sage),#d7c9b8,transparent);opacity:.8}
 .site-header .brand,.site-header .nav-links,.site-header .menu-toggle{position:relative;z-index:1}
 @media(max-width:700px){.site-header::before{inset:0 12% 0 24%;opacity:.55}.site-header .brand{font-size:12px}.site-header .brand span{font-size:8px}}
+
+/* Distinct sage-tinted opening panel with a flowing wave edge */
+.site-header{
+  background:#e5eadf;
+  border-bottom:0;
+}
+.site-header::before{display:none}
+.site-header::after{display:none}
+.hero{
+  background:#e5eadf;
+  padding-top:76px;
+  padding-bottom:116px;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  left:0;
+  right:0;
+  bottom:-1px;
+  height:76px;
+  pointer-events:none;
+  background-repeat:no-repeat;
+  background-position:center bottom;
+  background-size:100% 100%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 100' preserveAspectRatio='none'%3E%3Cpath d='M0 48 C150 78 220 72 350 38 S560 14 680 42 S900 82 1030 36 S1140 18 1200 8 L1200 100 L0 100 Z' fill='%23fbf8f3'/%3E%3Cpath d='M0 48 C150 78 220 72 350 38 S560 14 680 42 S900 82 1030 36 S1140 18 1200 8' fill='none' stroke='%2382917b' stroke-width='2.2' opacity='.9'/%3E%3Cpath d='M0 58 C150 88 230 82 360 48 S565 24 690 52 S905 92 1040 46 S1145 28 1200 18' fill='none' stroke='%23a16d48' stroke-width='1.5' opacity='.65'/%3E%3C/svg%3E");
+}
+@media(max-width:700px){
+ .nav-links{background:#e5eadf}
+ .hero{padding-top:55px;padding-bottom:105px}
+ .hero::after{height:58px}
+}
