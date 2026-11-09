@@ -124,3 +124,15 @@
  .hero{background:#f4eee5;padding:105px 8% 75px}
  .nav-links{background:#82917b}
 }
+
+
+/* A soft sage-green tint in the portfolio buttons */
+.button{
+  border:1px solid rgba(130,145,123,.32);
+  background:linear-gradient(110deg,#49382b 0%,#4b3d30 78%,#52604c 100%);
+  box-shadow:0 8px 22px rgba(73,56,43,.2),0 0 15px rgba(130,145,123,.2),inset 0 0 0 1px rgba(223,230,218,.12);
+}
+.button:hover{
+  background:linear-gradient(110deg,#80583d 0%,#746044 76%,#65765f 100%);
+  box-shadow:0 12px 28px rgba(73,56,43,.27),0 0 22px rgba(130,145,123,.3),inset 0 0 0 1px rgba(223,230,218,.18);
+}
