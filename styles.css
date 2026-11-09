@@ -208,3 +208,11 @@ body.video-viewer-open{overflow:hidden}
 .video-thumbnail:hover .video-thumbnail__play{transform:translate(-50%,-50%) scale(1.08);background:#65765f}
 .video-watch-button{margin-top:14px;cursor:pointer;font-family:inherit}
 @media(max-width:700px){.video-thumbnail,.video-thumbnail img,.video-thumbnail video,.video-thumbnail__fallback{min-height:240px}}
+
+
+/* Video cards: clean clickable thumbnails with rounded corners and no play overlay */
+.media-placeholder--video{border:0;border-radius:18px;overflow:hidden}
+.video-thumbnail{border-radius:18px;outline-offset:3px}
+.video-thumbnail img,.video-thumbnail video,.video-thumbnail__fallback{border-radius:18px}
+.video-thumbnail__play{display:none}
+.video-watch-button{border-radius:14px}
