@@ -12,7 +12,7 @@ function getVideoSource(rawUrl){
   try{
     const url=new URL(rawUrl);
     if(!['http:','https:'].includes(url.protocol))return null;
-    const host=url.hostname.replace(/^www\\./,'').toLowerCase();
+    const host=url.hostname.replace(/^www\./,'').toLowerCase();
     if(host==='youtu.be'){
       const id=url.pathname.split('/').filter(Boolean)[0];
       return id?{type:'embed',src:'https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1&rel=0',thumbnail:'https://i.ytimg.com/vi/'+encodeURIComponent(id)+'/hqdefault.jpg'}:null;
@@ -24,9 +24,9 @@ function getVideoSource(rawUrl){
     }
     if(host==='vimeo.com'||host==='player.vimeo.com'){
       const id=url.pathname.split('/').filter(Boolean).pop();
-      return id&&/^\\d+$/.test(id)?{type:'embed',src:'https://player.vimeo.com/video/'+id+'?autoplay=1'}:null;
+      return id&&/^\d+$/.test(id)?{type:'embed',src:'https://player.vimeo.com/video/'+id+'?autoplay=1'}:null;
     }
-    if(/\\.(mp4|webm|ogg|m4v)(\\?.*)?$/i.test(url.href))return{type:'file',src:url.href};
+    if(/\.(mp4|webm|ogg|m4v)(\?.*)?$/i.test(url.href))return{type:'file',src:url.href};
     return null;
   }catch{return null;}
 }
@@ -91,7 +91,7 @@ function renderProjects(projects){
     const media=document.createElement('div');media.className='media-placeholder';
     const url=safeText(project.media_url);
     const title=safeText(project.title,'Untitled project');
-    const video=url&&/^https?:\\/\\//i.test(url)?getVideoSource(url):null;
+    const video=url&&/^https?:\/\//i.test(url)?getVideoSource(url):null;
     if(video){
       media.classList.add('media-placeholder--video');
       const preview=document.createElement('button');
@@ -130,7 +130,7 @@ function renderProjects(projects){
       const description=document.createElement('p');description.textContent=safeText(project.description);
       article.append(media,watch,heading,description);
     }else{
-      if(url&&/^https?:\\/\\//i.test(url)){
+      if(url&&/^https?:\/\//i.test(url)){
         const img=document.createElement('img');
         img.src=url;img.alt=title;img.loading='lazy';img.style.cssText='width:100%;height:100%;object-fit:cover';
         media.replaceChildren(img);
